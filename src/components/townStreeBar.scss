@@ -1,0 +1,40 @@
+.townStreeBar {
+        width: 6.9rem;
+        height: 1.74rem;
+        padding-top: .3rem;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-bottom: .4rem;
+        background: url('../static/img/user/Bitmap@2x.png') no-repeat;
+        background-size: 100% 100%;
+        &-item {
+            height: .6rem;
+            width: 100%;
+            font-size:.3rem;
+            font-family:'PingFangSC-Semibold';
+            font-weight:600;
+            span {
+                float: left;
+                height: .42rem;
+                line-height: .42rem;
+                text-align: center;
+                margin: .14rem 0;
+                width: 33%;
+                border-right: 1px solid rgba(226, 226, 226, 1);
+            }
+            span:last-child {
+                border-left: none;
+            }
+            span.active {
+            color:rgba(56,151,240,1);
+            }
+        }
+        &-info {
+            width: 100%;
+            text-align: center;
+            height: .4rem;
+            padding-top: .34rem;
+            line-height: .4rem;
+            font-size: .28rem;
+        }
+    }

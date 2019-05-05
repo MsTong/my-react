@@ -1,0 +1,34 @@
+.townStreeBar {
+  width: 6.9rem;
+  height: 1.74rem;
+  padding-top: .3rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: .4rem;
+  background: url("../static/img/user/Bitmap@2x.png") no-repeat;
+  background-size: 100% 100%; }
+  .townStreeBar-item {
+    height: .6rem;
+    width: 100%;
+    font-size: .3rem;
+    font-family: 'PingFangSC-Semibold';
+    font-weight: 600; }
+    .townStreeBar-item span {
+      float: left;
+      height: .42rem;
+      line-height: .42rem;
+      text-align: center;
+      margin: .14rem 0;
+      width: 33%;
+      border-right: 1px solid #e2e2e2; }
+    .townStreeBar-item span:last-child {
+      border-left: none; }
+    .townStreeBar-item span.active {
+      color: #3897f0; }
+  .townStreeBar-info {
+    width: 100%;
+    text-align: center;
+    height: .4rem;
+    padding-top: .34rem;
+    line-height: .4rem;
+    font-size: .28rem; }
