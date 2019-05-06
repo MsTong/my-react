@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import './userHeader.scss';
-// import TownStreeBar from './townStreeBar'
-// import TownBar from '../containers/t ownBar'
+import './_userHeader.scss';
 import api from '@/api'
 class UserHeader extends Component {
     constructor(props) {
