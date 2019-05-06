@@ -4,16 +4,17 @@ import './index.css';
 import adaptive from './adaptive'
 import { Route, Router } from 'react-router'
 import { createHashHistory } from 'history';
-import Found from './components/Found';
-import Follow from './components/Follow';
-import My from './components/My';
-import MyName from './components/MyName';
-import MySex from './components/MySex';
+// import Found from './components/Found';
+// import Follow from './components/Follow';
+// import My from './components/My';
+// import MyName from './components/MyName';
+// import MySex from './components/MySex';
 import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import todoApp from './reducers'
-import App from './components/App'
+// import App from './components/App'
+import user from './page/user/home'
 import { Provider } from 'react-redux'
 adaptive.desinWidth = 750
 adaptive.baseFont = 24
@@ -26,13 +27,13 @@ function renderPage() {
     ReactDOM.render(
         <Provider store={store}>
       <Router history={history}>
-          <Route path="/" component={ App }>
-              <Route path="found" component={ Found }></Route>
+          <Route path="/" component={ user }>
+              {/* <Route path="found" component={ Found }></Route>
               <Route path="follow" component={ Follow }></Route>
               <Route path="my" component={ My }>
                   <Route path=":myname" component={ MyName }></Route>
                   <Route path="mysex" component={ MySex }></Route>
-              </Route>
+              </Route> */}
           </Route>
       </Router>
       </Provider>, 

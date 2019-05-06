@@ -1,0 +1,117 @@
+.userHeader {
+  width: 100vw;
+  font-size:.28rem;
+  font-family:'PingFangSC-Regular';
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  font-size: 0.24rem;
+  border-bottom: 1px solid rgba(245, 245, 245, 1);
+  background: url('../../../static/img/user/topBac.png') no-repeat;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 2.46rem 2.6rem;
+  &-icon {
+    height: 1.1rem;
+    width: 100vw;
+    padding: 0.3rem;
+    box-sizing: border-box;
+    &-setting {
+      float: right;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-right: 0.3rem;
+      background: url("../../../static/img/user/settings_light@2x.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    &-message {
+      float: right;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: url("../../../static/img/user/message_light@2x.png")
+        no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+ 
+  &-title{
+    width: 100vw;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: .5rem;
+    &-userInfo {
+      height: 1.1rem;
+      width: 4.5rem;
+      display: block;
+      border: none;
+      text-decoration: none;
+      .userImg {
+        float: left;
+        width: 1.1rem;
+        height: 1.1rem;
+        border-radius: 0.55rem;
+        border: none;
+      }
+      .userInfo {
+        float: left;
+        width: 3rem;
+        margin-left: 0.4rem;
+        &-username {
+          display: inline-block;
+          width: 3rem;
+          height: 0.6rem;
+          line-height: 0.6rem;
+          font-size: 0.44rem;
+          font-family: "PingFangSC-Semibold";
+          font-weight: 600;
+          color: rgba(51, 51, 51, 1);
+        }
+        &-RMGrade {
+          display: inline-block;
+          width: 3rem;
+          height: 0.4rem;
+          line-height: 0.4rem;
+          margin-top: 0.06rem;
+          width: 1.74rem;
+          background: rgba(56, 151, 240, 1);
+          border-radius: 0.22rem;
+          font-size: 0.24rem;
+          color: rgba(255, 255, 255, 1);
+          text-align: center;
+          font-family: "PingFangSC-Regular";
+        }
+      }
+    }
+    &-myproperty {
+      height:.5rem;
+      font-size: .24rem;
+      font-family:'PingFangSC-Regular';
+      color:rgba(255,255,255,1);
+      line-height: .3rem;
+      padding: .1rem 0 .1rem .16rem;
+      box-sizing: border-box;
+      position: absolute;
+      right: 0;
+      top: .3rem;
+      border-radius: .25rem 0 0 .25rem;
+      background:rgba(56, 151, 240, 1);
+      .arrow {
+        background: url('../../../static//img/user/myproperty_arrow.png') no-repeat;
+        background-size: 100% 100%;
+        width: .2rem;
+        height: .2rem;
+        display: inline-block;
+        position: relative;
+        top: .025rem;
+      }
+    }
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
