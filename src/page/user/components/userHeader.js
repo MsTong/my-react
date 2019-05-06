@@ -14,7 +14,7 @@ class UserHeader extends Component {
                 </div>
                 <div className="userHeader-title">
                     <div className="userHeader-title-userInfo">
-                        <img className="userImg" src={require("../../../static/img/user/user.jpeg")} alt=""/>
+                        <img className="userImg" src={require("@/static/img/user/user.jpeg")} alt=""/>
                             <div className="userInfo">
                                 <span className="userInfo-username">ssss</span>
                                 <span className="userInfo-RMGrade">wwww</span>
