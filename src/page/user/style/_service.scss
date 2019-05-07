@@ -1,0 +1,57 @@
+.service {
+  font-family:'PingFangSC-Regular';
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  font-size: .28rem;
+  border: none;
+  width: 100vw;
+  padding-top: 0.4rem;
+  box-sizing: border-box;
+  border-top: 0.2rem solid rgba(245, 245, 245, 1);
+  &-list {
+    width: 100vw;
+    overflow: hidden;
+    padding-top: .3rem;
+    li {
+      float: left;
+      width: 25%;
+      height: 1rem;
+      margin-bottom: 0.4rem;
+      img {
+        width: 0.6rem;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 0.1rem;
+      }
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 0.3rem;
+        font-size: 0.24rem;
+        font-weight: 400;
+        line-height: 0.3rem;
+        text-align: center;
+      }
+    }
+  }
+}
+.inviteCode{
+  width: 86.66vw;
+  height: 133.333vw;
+  background: url('../../../static/img/user/inviteCode.jpg') no-repeat;
+  background-size: cover;
+  border-radius: 1vw;
+  position: relative;
+  z-index: 999;
+  img{
+    width: 26vw;
+    height: 26vw;
+    border: 0 solid #fff;
+    padding-top: 0vw;
+    position: absolute;
+    left: 30.66vw;
+    top: 77vw;
+    z-index: 1000;
+    background: #fff;
+  }
+}

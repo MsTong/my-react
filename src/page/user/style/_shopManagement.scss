@@ -1,0 +1,51 @@
+.shopManagement {
+  font-family:'PingFangSC-Regular';
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  font-size: .28rem;
+  padding-bottom: 0;
+  overflow: hidden;
+  border-top: .2rem solid rgba(245, 245, 245, 1);
+  padding-top: 0.4rem;
+  &-list {
+    padding: 0 0.4rem;
+    padding-top: .2rem;
+    li {
+      width: 6.7rem;
+      height: 0.9rem;
+      border-bottom: 1px solid rgba(238, 238, 238, 1);
+      line-height: 0.9rem;
+      font-size: 0.28rem;
+      span:first-child {
+        float: left;
+        width: 0.4rem;
+        height: 0.4rem;
+        margin: 0.25rem 0;
+        img {
+          width: 100%;
+          height: 100%;
+          float: left;
+        }
+      }
+      span:nth-child(2) {
+        float: left;
+        padding-left: 0.2rem;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        margin: 0.25rem 0;
+      }
+      span:last-child {
+        float: right;
+        width: 0.3rem;
+        height: 0.3rem;
+        background: url("../../../static/img/user/registBtn.png")
+        no-repeat;
+        background-size: 100%;
+        margin: 0.3rem 0;
+      }
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
