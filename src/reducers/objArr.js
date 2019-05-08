@@ -1,4 +1,4 @@
-const objArr = (state={objArr:[]}, action) => {
+const objArr = (state={objArr:{a:'ssss'}}, action) => {
     switch (action.type) {
       case 'SETOBJARR':
         return action.data

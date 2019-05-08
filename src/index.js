@@ -14,7 +14,7 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import todoApp from './reducers'
 // import App from './components/App'
-import user from './page/user/home'
+import User from './containers/Home';
 import { Provider } from 'react-redux'
 adaptive.desinWidth = 750
 adaptive.baseFont = 24
@@ -22,12 +22,13 @@ adaptive.scaleType = 1
 adaptive.init()
 const history = createHashHistory();
 //dispatch、subscribe、getStatere、placeReducer 接口返回
-let store = createStore(todoApp, {nowIndex:-1,objArr:[{val:'',item:'',status:false},{val:'',item:'',status:false},{val:'',item:'',status:false}]},applyMiddleware(thunk))
+// let store = createStore(todoApp, {objArr:{}},applyMiddleware(thunk))
+let store = createStore(todoApp, {objArr:{}})
 function renderPage() {
     ReactDOM.render(
         <Provider store={store}>
       <Router history={history}>
-          <Route path="/" component={ user }>
+          <Route path="/" component={ User }>
               {/* <Route path="found" component={ Found }></Route>
               <Route path="follow" component={ Follow }></Route>
               <Route path="my" component={ My }>

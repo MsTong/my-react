@@ -1,6 +1,6 @@
-export const select = (data) => {
+export const setUserInfo = (data) => {
   return {
-    type: 'SELECT',
+    type: 'SETUSERINFO',
     data
   }
 }

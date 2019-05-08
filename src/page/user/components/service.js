@@ -4,6 +4,9 @@ import TitleCard from './title';
 
 // import api from '@/api'
 class Service extends Component {
+    constructor(props) {
+        super(props);
+    }
     checkAll(){
         console.log(1111)
     }
@@ -14,6 +17,7 @@ class Service extends Component {
         console.log('doRegist')
     }
     render() {
+        console.log((this.props))
         return (
             <div className="service">
                 <TitleCard title="常用服务"/>
@@ -39,6 +43,7 @@ class Service extends Component {
                     <span>福利商品</span>
                 </li>
             </ul>
+                <div>{this.props.objArr}</div>
     </div>
                 );
               }

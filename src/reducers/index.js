@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux'
-import select from './select'
-import showObjArr from './objArr'
+import { combineReducers } from 'redux';
+import showObjArr from './objArr';
+import showUserInfo from './userInfo';
 
 const todoApp = combineReducers({
-  nowIndex:select,
-  objArr: showObjArr
+  objArr: showObjArr,
+  userInfo: showUserInfo
 })
 export default todoApp
