@@ -12,31 +12,28 @@ class App extends Component {
         this.state = {sid: window.localStorage.getItem('sid') || ''};
     }
     async componentDidMount() {
-        console.log((this.props))
         const data = await api.post('user/refreshUser', {sid: this.state.sid});
         const data2 = await api.post('user/checkShops', {sid: this.state.sid});
         if (data.data && data.code === 0 && data.state === 1) {
-            // this.setState({'userInfo':data.data.userCenterInfo});
             this.props.setUserInfo(data.data);
         } else {
             alert(data.msg);
         }
         if (data2.data && data.code === 0 && data2.state === 1) {
-            // this.setState({'userShops':data2.data});
-            // this.setState({'nowRmGrade':this.state.RmGrade[data2.data.RMGrade-1]});
-            this.props.setObjArr(data2.data);
+            console.log(data2.data)
+            this.props.setShopsInfo(data2.data);
         } else {
             alert(data.msg);
         }
-
+        console.log((this.props))
     }
   render() {
       return (
       <div className="App">
-       <UserHeader/>
+       <UserHeader userInfo={ this.props.userInfo }/>
        <MyOrder/>
-       <Service/>
-       <ShopManagement/>
+       <Service shopsInfo={ this.props.shopsInfo }/>
+       <ShopManagement userInfo={ this.props.userInfo }/>
       </div>
     );
   }

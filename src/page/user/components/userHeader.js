@@ -4,22 +4,23 @@ import api from '@/api'
 class UserHeader extends Component {
     constructor(props) {
         super(props);
-        this.state = {userInfo:'ffff',userShops:null,nowRmGrade:'',RmGrade:['普通会员','初级会员','中级会员','高级会员'],sid: window.localStorage.getItem('sid')||''};
+        console.log((props))
+        // this.state = {userInfo:'ffff',userShops:null,nowRmGrade:'',RmGrade:['普通会员','初级会员','中级会员','高级会员'],sid: window.localStorage.getItem('sid')||''};
     }
     async componentDidMount() {
-        const data = await api.post('user/refreshUser', {sid: this.state.sid});
-        const data2 = await api.post('user/checkShops', {sid: this.state.sid});
-        if (data.data && data.code === 0 && data.state === 1) {
-            this.setState({'userInfo':data.data.userCenterInfo});
-        } else {
-            alert(data.msg);
-        }
-        if (data2.data && data.code === 0 && data2.state === 1) {
-            this.setState({'userShops':data2.data});
-            this.setState({'nowRmGrade':this.state.RmGrade[data2.data.RMGrade-1]});
-        } else {
-            alert(data.msg);
-        }
+        // const data = await api.post('user/refreshUser', {sid: this.state.sid});
+        // const data2 = await api.post('user/checkShops', {sid: this.state.sid});
+        // if (data.data && data.code === 0 && data.state === 1) {
+        //     this.setState({'userInfo':data.data.userCenterInfo});
+        // } else {
+        //     alert(data.msg);
+        // }
+        // if (data2.data && data.code === 0 && data2.state === 1) {
+        //     this.setState({'userShops':data2.data});
+        //     this.setState({'nowRmGrade':this.state.RmGrade[data2.data.RMGrade-1]});
+        // } else {
+        //     alert(data.msg);
+        // }
 
     }
     render() {
@@ -33,8 +34,8 @@ class UserHeader extends Component {
                     <div className="userHeader-title-userInfo">
                         <img className="userImg" src={require("@/static/img/user/user.jpeg")} alt=""/>
                             <div className="userInfo">
-                                <span className="userInfo-username">{this.state.userInfo.name}</span>
-                                <span className="userInfo-RMGrade">{this.state.nowRmGrade}</span>
+                                <span className="userInfo-username">{this.props.userInfo.name}</span>
+                                {/*<span className="userInfo-RMGrade">{this.state.nowRmGrade}</span>*/}
                             </div>
                     </div>
                         <span className="userHeader-title-myproperty">

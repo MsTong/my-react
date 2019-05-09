@@ -12,7 +12,7 @@ import { createHashHistory } from 'history';
 import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import todoApp from './reducers'
+import userApp from './reducers'
 // import App from './components/App'
 import User from './containers/Home';
 import { Provider } from 'react-redux'
@@ -22,8 +22,7 @@ adaptive.scaleType = 1
 adaptive.init()
 const history = createHashHistory();
 //dispatch、subscribe、getStatere、placeReducer 接口返回
-// let store = createStore(todoApp, {objArr:{}},applyMiddleware(thunk))
-let store = createStore(todoApp, {objArr:{}})
+let store = createStore(userApp, {},applyMiddleware(thunk));
 function renderPage() {
     ReactDOM.render(
         <Provider store={store}>

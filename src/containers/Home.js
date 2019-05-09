@@ -1,11 +1,11 @@
 import HomeCom from '../page/user/home'
 import { connect } from 'react-redux'
-import { setObjArr } from '../actions/setObjArr';
+import { setShopsInfo } from '../actions/setShopsInfo';
 import { setUserInfo } from '../actions/setUserInfo';
 // import PropTypes from 'prop-types';
 const setObj = (data, filter) => {
   switch (filter) {
-    case 'SETOBJARR':
+    case 'SETSHOPSINFO':
       return data;
     case 'SETUSERINFO':
       return data
@@ -15,13 +15,13 @@ const setObj = (data, filter) => {
 }
 const mapStateToProps = (state) => {
   return {
-    objArr: setObj(state.objArr, 'SETOBJARR'),
-    userInfo: setObj(state.userInfo, 'SETUSERINFO')
+    shopsInfo: setObj(state.shopsInfo, 'SETSHOPSINFO'),
+    userInfo: setObj(state.userInfo, 'SETSHOPSINFO')
   }
 }
 
 const mapDispatchToProps = ({
-  setObjArr: setObjArr,
+  setShopsInfo: setShopsInfo,
   setUserInfo: setUserInfo
 })
 

@@ -20,49 +20,49 @@ class ShopManagement extends Component {
             <div className="shopManagement">
                 <TitleCard title="RM/商家服务"/>
                 <ul className="shopManagement-list">
-                    <li onClick={this.shopjumpUrl()}>
+                    <li onClick={this.shopjumpUrl}>
                         <span>
                           <img src={require("@/static/img/user/hfg.png")}/>
                         </span>
                         <span>商城店铺管理</span>
                         <span></span>
                     </li>
-                    <li onClick={this.shopjumpUrl('html/goods/main/registerHfg.html')}>
+                    <li onClick={this.shopjumpUrl}>
                     <span>
                       <img src={require("@/static/img/user/hfg.png")}/>
                     </span>
                         <span>商城店铺入驻</span>
                         <span></span>
                     </li>
-                    <li onClick={this.shopjumpUrl('html/globalhome/house-owner/theOwner_r.html')}>
+                    <li onClick={this.shopjumpUrl}>
         <span>
           <img src={require("@/static/img/user/qqj.png")}/>
         </span>
                         <span>全球家店铺管理</span>
                         <span></span>
                     </li>
-                    <li onClick={this.toshopManagement('/user/newRetail/nRShopManagement')}>
+                    <li onClick={this.toshopManagement}>
         <span>
           <img src={require("@/static/img/user/xls.png")}/>
         </span>
                         <span>新零售店铺管理</span>
                         <span></span>
                     </li>
-                    <li onClick={this.doRegister('RM')}>
+                    <li onClick={this.doRegister}>
         <span>
           <img src={require("@/static/img/user/RM.png")}/>
         </span>
                         <span>注册RM门店</span>
                         <span></span>
                     </li>
-                    <li onClick={this.doRegister('JZD')}>
+                    <li onClick={this.doRegister}>
         <span>
           <img src={require("@/static/img/user/jzd.png")}/>
         </span>
                         <span>注册街镇代</span>
                         <span></span>
                     </li>
-                    <li onClick={this.toshopManagement('/user/jzdlist')}>
+                    <li onClick={this.toshopManagement}>
         <span>
           <img src={require("@/static/img/user/jzd.png")}/>
         </span>

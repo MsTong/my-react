@@ -26,7 +26,9 @@ if (host === "m.fybanks.com") {//生产
 } else {//本地
   // 默认线上
   // config.api = "http://192.168.10.26:8080/"
-  config.api = "https://mall-api.fybanks.com/"
+  // config.api = "https://mall-api.fybanks.com/"
+  // config.api = "https://mall-api.fybanks.cn/"
+  config.api = "https://mall-api.heyoucloud.com/"
   config.linkApi = "https://m.heyoucloud.com/"
   config.fullUrlPath = "https://m.heyoucloud.com/html/home/#/"
   config.imgServerUrl = "https://img-test[0].fybanks.com/"
