@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import {Link, Route, Switch} from 'react-router-dom';
 import api from '@/api';
 import './home.scss';
+import Xls from '@/page/xls';
 import UserHeader from './components/userHeader';
 import MyOrder from './components/myorder';
 import Service from './components/service';
 import ShopManagement from './components/shopManagement';
+import User from "../../containers/Home";
 
 class App extends Component {
     constructor(props) {
@@ -33,7 +36,9 @@ class App extends Component {
        <UserHeader userInfo={ this.props.userInfo }/>
        <MyOrder/>
        <Service shopsInfo={ this.props.shopsInfo }/>
-       <ShopManagement userInfo={ this.props.userInfo }/>
+          <Route exact path="/user/xls" component={Xls}></Route>
+          <ShopManagement userInfo={ this.props.userInfo } shopsInfo={ this.props.shopsInfo }/>
+          {this.props.children}
       </div>
     );
   }

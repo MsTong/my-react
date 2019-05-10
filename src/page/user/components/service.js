@@ -82,7 +82,7 @@ class Service extends Component {
                             : ''
                     }
                     {
-                        this.props.shopsInfo.RMGrade > 1 ?
+                        this.props.shopsInfo.RMGrade > 1&&this.props.shopsInfo.RMGrade < 4 ?
                             <li  onClick={this.doRegist}>
                                 <img src={require("@/static/img/user/updateRM.png")}/>
                                 <span>升级RM</span>
@@ -106,7 +106,7 @@ class Service extends Component {
                             : ''
                     }
             </ul>
-                <div>{this.props.objArr}</div>
+                {this.props.children}
     </div>
                 );
               }

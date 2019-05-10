@@ -2,20 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import adaptive from './adaptive'
-import { Route, Router } from 'react-router'
+import { Route, Router, Switch, Redirect, HashRouter  } from 'react-router-dom';
 import { createHashHistory } from 'history';
-// import Found from './components/Found';
-// import Follow from './components/Follow';
-// import My from './components/My';
-// import MyName from './components/MyName';
-// import MySex from './components/MySex';
 import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import userApp from './reducers'
 // import App from './components/App'
+import Index from './page';
 import User from './containers/Home';
 import { Provider } from 'react-redux'
+import Xls from '@/page/xls';
 adaptive.desinWidth = 750
 adaptive.baseFont = 24
 adaptive.scaleType = 1
@@ -23,20 +20,22 @@ adaptive.init()
 const history = createHashHistory();
 //dispatch、subscribe、getStatere、placeReducer 接口返回
 let store = createStore(userApp, {},applyMiddleware(thunk));
+
+const Roster = () => (
+    <Switch>
+        <Route exact path='/user' component={User}/>
+        <Route path='/user/xls' component={Xls}/>
+    </Switch>
+)
 function renderPage() {
     ReactDOM.render(
         <Provider store={store}>
-      <Router history={history}>
-          <Route path="/" component={ User }>
-              {/* <Route path="found" component={ Found }></Route>
-              <Route path="follow" component={ Follow }></Route>
-              <Route path="my" component={ My }>
-                  <Route path=":myname" component={ MyName }></Route>
-                  <Route path="mysex" component={ MySex }></Route>
-              </Route> */}
-          </Route>
-      </Router>
-      </Provider>, 
+            <Router history={history }>
+                <Switch>
+                    <Route path='/user' component={Roster}/>
+                </Switch>
+            </Router>
+        </Provider>,
         document.getElementById('root'));
 }
 renderPage();
