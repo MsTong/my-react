@@ -8,11 +8,10 @@ import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import userApp from './reducers'
-// import App from './components/App'
-import Index from './page';
 import User from './containers/Home';
 import { Provider } from 'react-redux'
 import Xls from '@/page/xls';
+import OrderList from '@/page/order/orderList.js';
 adaptive.desinWidth = 750
 adaptive.baseFont = 24
 adaptive.scaleType = 1
@@ -27,12 +26,18 @@ const Roster = () => (
         <Route path='/user/xls' component={Xls}/>
     </Switch>
 )
+const Roster2 = () => (
+    <Switch>
+        <Route exact path='/orderList' component={OrderList}/>
+    </Switch>
+)
 function renderPage() {
     ReactDOM.render(
         <Provider store={store}>
             <Router history={history }>
                 <Switch>
                     <Route path='/user' component={Roster}/>
+                    <Route path='/orderList' component={Roster2}/>
                 </Switch>
             </Router>
         </Provider>,

@@ -36,9 +36,9 @@ class App extends Component {
        <UserHeader userInfo={ this.props.userInfo }/>
        <MyOrder/>
        <Service shopsInfo={ this.props.shopsInfo }/>
-          <Route exact path="/user/xls" component={Xls}></Route>
-          <ShopManagement userInfo={ this.props.userInfo } shopsInfo={ this.props.shopsInfo }/>
-          {this.props.children}
+        <Route exact path="/user/xls" component={Xls}></Route>
+        <ShopManagement userInfo={ this.props.userInfo } shopsInfo={ this.props.shopsInfo }/>
+        {this.props.children}
       </div>
     );
   }

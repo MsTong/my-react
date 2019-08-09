@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import './title.scss';
 class Title extends Component {
     constructor(props) {
@@ -13,8 +14,10 @@ class Title extends Component {
             title = <p className="titleCard-title">
                 <span>{this.props.title}</span>
                 <span className="checkAll" onClick={this.checkAll}>
+                    <Link to="/orderList">
                     <span>查看全部</span>
                     <span className="regspanstBtn"></span>
+                    </Link>
                 </span>
             </p>;
         } else {

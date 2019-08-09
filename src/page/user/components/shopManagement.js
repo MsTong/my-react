@@ -102,8 +102,8 @@ class ShopManagement extends Component {
                             : ''
                     }
                 </ul>
-                <Route exact path="/user/xls" component={Xls}></Route>
-                {this.props.children}
+                {/* <Route exact path="/user/xls" component={Xls}></Route> */}
+                {/* {this.props.children} */}
             </div>
         );
     }
